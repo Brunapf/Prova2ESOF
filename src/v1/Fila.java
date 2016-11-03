@@ -22,10 +22,10 @@ public class Fila {
 
 		Pessoa proximo = null;
 
-		proximo = verificaGravida();
+		proximo = verificaIdoso();
 
 		if (proximo == null) {
-			proximo = verificaIdoso();
+			proximo = verificaGravida() ;
 			if (proximo == null) {
 				proximo = pessoas.get(0);
 			}
