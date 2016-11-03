@@ -70,9 +70,11 @@ public class Testes {
 		Fila f = new Fila();
 		
 		Pessoa proximo = f.proximoFila();
-		proximo = null;
 		
-		Assert.assertFalse(false);
+			if (proximo == null){
+				Assert.assertNull(proximo);
+			}
+		
 		
 		
 	}
