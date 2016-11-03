@@ -34,6 +34,48 @@ public class Testes {
 		Assert.assertEquals(proximo.getNome(), "Beltrana");
 		
 		f.removePessoa(proximo);
+	
+		
 	}
-
+	
+	@Test
+	public void testegravida() {
+		Pessoa g1 = new Pessoa("Fulano", false, false);
+		Pessoa g2 = new Pessoa("Ciclana", true, false);
+		
+		Fila f = new Fila();
+		
+		f.addPessoa(g1);
+		f.addPessoa(g2);
+		
+		
+		Pessoa proximo = f.proximoFila();
+		
+		Assert.assertEquals(proximo.getNome(), "Ciclana");
+		
+		f.removePessoa(proximo);
+		proximo = f.proximoFila();
+			
+		Assert.assertEquals(proximo.getNome(), "Fulano");
+		
+		f.removePessoa(proximo);
+		
+	}
+	
+	@Test
+	public void testeproblema() {
+		
+		Pessoa p1 = new Pessoa("Fulano", false, false);
+		
+		Fila f = new Fila();
+		
+		Pessoa proximo = f.proximoFila();
+		proximo = null;
+		
+		Assert.assertFalse(false);
+		
+		
+	}
+	
+	
 }

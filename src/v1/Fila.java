@@ -15,16 +15,21 @@ public class Fila {
 	}
 	
 	public Pessoa proximoFila(){
+		if (pessoas.isEmpty()){
+			//System.out.println("Não há mais pessoas na fila.");
+			return null;
+		}
+		
 		Pessoa proximo = null;
 		
 		proximo = verificaGravida();
-		
+			
 		if(proximo == null)
 			proximo = pessoas.get(0);
 		
 		return proximo;
-	}
 	
+	}
 	public Pessoa verificaGravida(){
 		
 		for(Pessoa p: pessoas)
